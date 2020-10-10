@@ -1,0 +1,15 @@
+{
+  "name": "Video Squeezer",
+  "version": "1.0",
+  "description": "Speed up Youtube videos",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file:///*"],
+      "css": ["inject.css"],
+      "js": ["inject.js"]
+    }
+  ],
+  "web_accessible_resources": ["inject.css"],
+  "manifest_version": 2
+}

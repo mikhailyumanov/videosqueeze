@@ -1,0 +1,34 @@
+.vsq_settings_bar {
+  background-color: "black";
+  color: "white";
+  opacity: 0.9;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99999;
+
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+
+.vsq_dummy_text {
+  background-color: "black";
+  color: "white";
+  opacity: 0.3;
+
+  margin: 0;
+}
+
+.vsq_button {
+  background-color: "black";
+  color: "white";
+  opacity: 1;
+
+  width: 100px;
+  height: 50px;
+
+  margin: 0;
+}
