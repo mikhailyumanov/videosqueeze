@@ -37,10 +37,7 @@ const ADJ_SPEED_LOUDNESS_EXPECTED = 0.1;
 
 /// Find video object in document
 function GetVideoFromDocument() {
-  video = document.querySelector("video,audio,video-stream");
-  if (video == null) {
-    return document.querySele
-  }
+  return document.querySelector("video,audio,video-stream");
 }
 
 
