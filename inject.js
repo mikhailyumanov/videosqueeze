@@ -289,11 +289,11 @@ function GetLoudnessAvg(loudness_array) {
 
 
 function IndicatorAdjSpeed(loudness_array) {
-  const loudness_max = loudness_array.slice(0, LOUDNESS_WINDOW_SIZE).reduce(
-    (acc, x) => Math.max(acc, Math.abs(x - ANALYSER.fftSize / 2)), 0);
-  const adj_speed = loudness_max > 3 ? SQUEEZE_SPEED : GetSqueezeSpeedMax();
+  const loudness_avg = GetLoudnessAvg(GetLoudnessWindow(
+    loudness_array, LOUDNESS_WINDOW_SIZE));
+  const adj_speed = loudness_avg > 3 ? SQUEEZE_SPEED : GetSqueezeSpeedMax();
 
-  console.log(loudness_max, adj_speed);
+  console.log(loudness_avg, adj_speed);
   return adj_speed;
 }
 
